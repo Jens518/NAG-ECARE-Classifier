@@ -4,7 +4,7 @@ import spacy
 from collections import Counter
 
 # Load spaCy model for NLP
-nlp = spacy.load("en_core_web_md")  # You'll need to install this with: python -m spacy download en_core_web_md
+nlp = spacy.load("en_core_web_sm")  # Use smaller model
 
 class ECAREClassifier:
     def __init__(self, taxonomy_file):
@@ -41,6 +41,9 @@ class ECAREClassifier:
                 if keyword not in keyword_index:
                     keyword_index[keyword] = []
                 keyword_index[keyword].append(code)
+
+        # Add debug print
+        print(f"Keyword index created with {len(keyword_index)} keywords")
         
         return keyword_index
     
@@ -108,6 +111,11 @@ class ECAREClassifier:
             "codes": simplified_codes,
             "reasoning": reasoning
         }
+        
+        # Debug prints
+        print(f"Input text: {text[:100]}...")
+        print(f"Extracted keywords: {input_keywords[:20]}")
+        print(f"Matching keywords: {[k for k in input_keywords if k in self.keyword_index]}")
     
     def _simplify_code_list(self, codes):
         """Simplify the code list by consolidating parent codes."""
