@@ -18,7 +18,7 @@ def classify():
 def initialize_classifier():
     global classifier
     # Use the included Excel file in the repository
-    taxonomy_file = os.path.join(os.path.dirname(__file__), "ECARE_Taxonomy_Full_List.xlsx")
+    taxonomy_file = os.path.join(os.path.dirname(__file__), "ECARE_Taxonomy_Full List.xlsx")
     classifier = ECAREClassifier(taxonomy_file)
 
 if __name__ == "__main__":
