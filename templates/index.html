@@ -19,7 +19,7 @@
         }
         h1 {
             color: #2c3e50;
-            border-bottom: 2px solid #fe5200; /* Changed from blue to NAG orange */
+            border-bottom: 2px solid #fe5200; /* NAG orange */
             padding-bottom: 10px;
         }
         .header {
@@ -40,7 +40,7 @@
             font-family: inherit;
         }
         button {
-            background-color: #fe5200; /* Changed from blue to NAG orange */
+            background-color: #fe5200; /* NAG orange */
             color: white;
             border: none;
             padding: 10px 20px;
@@ -50,7 +50,7 @@
             transition: background-color 0.3s;
         }
         button:hover {
-            background-color: #d44500; /* Darker version of NAG orange */
+            background-color: #d44500; /* NAG orange, but darker */
         }
         #results {
             margin-top: 20px;
@@ -86,7 +86,7 @@
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            border-left-color: #fe5200; /* Changed from blue to NAG orange */
+            border-left-color: #fe5200; /* NAG orange */
             animation: spin 1s linear infinite;
             display: inline-block;
         }
@@ -98,10 +98,10 @@
 </head>
 <body>
     <div class="header">
-        <h1>ECARE Taxonomy Classifier</h1>
+        <h1>ECARE Taxonomy Machine</h1>
         <img src="https://raw.githubusercontent.com/jens518/NAG-ECARE-Classifier/main/nag_logo.png" alt="NAG Logo" class="logo">
     </div>
-    
+
     <p>Enter a company name, description, or any text to classify according to the ECARE taxonomy:</p>
     
     <textarea id="input-text" placeholder="Enter company description or any text here..."></textarea>
@@ -118,6 +118,7 @@
         <div class="codes">
             <strong>ECARE Codes:</strong> <span id="codes-result"></span>
         </div>
+        <p>DISCLAIMER: This calssifier uses keyword matching, please always double check the results below using https://www.ecare-project.eu/sites/default/files/deliverables/D2.1_Taxonomy_and_Mapping_plus_annexes_.zip</p>
         <div class="reasoning">
             <strong>Reasoning:</strong>
             <div id="reasoning-result"></div>
