@@ -95,6 +95,7 @@
             100% { transform: rotate(360deg); }
         }
     </style>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
 </head>
 <body>
     <div class="header">
@@ -115,10 +116,15 @@
     
     <div id="results" style="display: none;">
         <h2>Classification Results:</h2>
+        <div style="padding: 10px; background-color: #f9f9f9; border-left: 4px solid #3498db; margin-bottom: 15px; font-size: 14px;">
+        <strong>DISCLAIMER:</strong> This classifier uses keyword matching. Please always double check the results using 
+        <a href="https://www.ecare-project.eu/sites/default/files/deliverables/D2.1_Taxonomy_and_Mapping_plus_annexes_.zip" target="_blank" style="color: #2980b9; text-decoration: underline;">
+            this official ECARE taxonomy resource
+        </a>.
+        </div>
         <div class="codes">
             <strong>ECARE Codes:</strong> <span id="codes-result"></span>
         </div>
-        <p>DISCLAIMER: This calssifier uses keyword matching, please always double check the results below using https://www.ecare-project.eu/sites/default/files/deliverables/D2.1_Taxonomy_and_Mapping_plus_annexes_.zip</p>
         <div class="reasoning">
             <strong>Reasoning:</strong>
             <div id="reasoning-result"></div>
